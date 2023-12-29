@@ -1,0 +1,6 @@
+[flake8]
+ignore = W503, E203, F405, F403
+extend-exclude = venv/
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+max-line-length = 120
