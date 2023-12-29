@@ -1,0 +1,6 @@
+build/
+.venv/
+dist/
+streamlit_copilot.egg-info/
+streamlit_copilot/frontend/build/
+streamlit_copilot/frontend/node_modules/
