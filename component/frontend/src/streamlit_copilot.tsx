@@ -269,7 +269,7 @@ class Copilot extends StreamlitComponentBase<State> {
       outline: 'none',
       position: 'absolute',
       backgroundColor: 'transparent',
-      color:theme.secondaryBackgroundColor,
+      color: theme.base === 'light' ? 'rgba(41,51,62,0.5)' : 'rgba(255,255,255,0.5)',
       padding: '0'
     }
   }
