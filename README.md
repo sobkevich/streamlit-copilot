@@ -1,11 +1,7 @@
 # Streamlit Copilot
 
-
-![Copilot light](resources/copilot3.gif)
-![Copilot dark](resources/copilot2.gif)
-
-
-
+![Copilot light](resources/copilot_light.gif)
+![Copilot dark](resources/copilot_dark.gif)
 
 
 To run the component locally:
