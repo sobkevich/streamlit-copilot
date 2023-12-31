@@ -226,12 +226,17 @@ class Copilot extends StreamlitComponentBase<State> {
   }
 
   public render = (): ReactNode => {
+    const { theme } = this.props
+    if (!theme) {
+      return <div>Theme is undefined, please check streamlit version.</div>
+    }
     const height_int = this.props.args["height"]
-    const font_fam = this.props.args["font_family"] + ', sans-serif';
+    const font_fam = theme.font;
 
     const f_height = height_int + 'px';
 
-    const f_border = '1px solid rgb(241,242,246)';
+    const f_focused = '1px solid ' + theme.primaryColor;
+    const f_not_focused = '1px solid ' + theme.secondaryBackgroundColor;
 
     return (
         <div
@@ -240,12 +245,12 @@ class Copilot extends StreamlitComponentBase<State> {
             {
               height:f_height,
               width:'auto',
-              border:this.state.isFocused ? '1px solid red' : f_border,
+              border:this.state.isFocused ? f_focused: f_not_focused,
               borderRadius:'0.5em',
               overflowY:'scroll',
               overflowX:'hidden',
               position: 'relative',
-              backgroundColor: 'rgb(241,242,246)'
+              backgroundColor: theme.secondaryBackgroundColor
             }
           }
           onFocus={this._onFocus}
@@ -264,7 +269,7 @@ class Copilot extends StreamlitComponentBase<State> {
       outline: 'none',
       position: 'absolute',
       backgroundColor: 'transparent',
-      color:'rgba(41,51,62,0.5)',
+      color:theme.secondaryBackgroundColor,
       padding: '0'
     }
   }
@@ -285,7 +290,7 @@ class Copilot extends StreamlitComponentBase<State> {
               outline: 'none',
               position: 'absolute',
               backgroundColor: 'transparent',
-              color:'rgb(41,51,62)',
+              color:theme.textColor,
               padding: '0'
             }
           }
