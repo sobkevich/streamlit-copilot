@@ -1,5 +1,9 @@
 # Streamlit Copilot
 
+![Copilot light](resources/copilot_light.gif)
+![Copilot dark](resources/copilot_dark.gif)
+
+
 To run the component locally:
 1. Ensure that you have correct versions of Node and NPM installed:
 - npm version: `6.14.13`
