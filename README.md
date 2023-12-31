@@ -16,7 +16,7 @@ npm run start
 pip install streamlit
 ```
 5. In `component/__init__.py` file:
-- replace `"YOUR_API_URL"` with the actual URL of the API that provides LLM text completion responses
+- replace `"YOUR_API_URL"` with the actual URL of the API that provides LLM text completion responses ([example](https://llama-cpp-python.readthedocs.io/en/latest/install/macos/))
 - set `_RELEASE = False`
 6. Run the following command in the root directory of the project (in a separate terminal):
 ```
