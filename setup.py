@@ -8,8 +8,6 @@ long_description = (this_directory / "README.md").read_text()
 setuptools.setup(
     name="streamlit_copilot",
     version="0.0.1",
-    author="Anastasiia Sobkevych",
-    author_email="sobkevich.anastasia@gmail.com",
     description="Streamlit component: Copilot text autocomplete",
     long_description=long_description,
     long_description_content_type="text/markdown",
